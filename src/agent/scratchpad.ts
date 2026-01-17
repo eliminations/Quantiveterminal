@@ -11,10 +11,10 @@ export interface ScratchpadEntry {
 /**
  * Append-only scratchpad for tracking agent work on a query.
  * Uses JSONL format (newline-delimited JSON) for resilient appending.
- * Files are persisted in .dexter/scratchpad/ for debugging/history.
+ * Files are persisted in .quantive/scratchpad/ for debugging/history.
  */
 export class Scratchpad {
-  private readonly scratchpadDir = '.dexter/scratchpad';
+  private readonly scratchpadDir = '.quantive/scratchpad';
   private readonly filepath: string;
 
   constructor(query: string) {

@@ -1,11 +1,11 @@
 {
-  "name": "dexter-ts",
+  "name": "quantive-terminal",
   "version": "3.0.0",
-  "description": "Dexter - AI agent for deep financial research.",
+  "description": "Quantive Terminal - AI agent for deep financial research.",
   "type": "module",
   "main": "src/index.tsx",
   "bin": {
-    "dexter-ts": "./src/index.tsx"
+    "quantive": "./src/index.tsx"
   },
   "scripts": {
     "start": "bun run src/index.tsx",

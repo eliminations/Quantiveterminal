@@ -22,7 +22,7 @@ export function getCurrentDate(): string {
 /**
  * Default system prompt used when no specific prompt is provided.
  */
-export const DEFAULT_SYSTEM_PROMPT = `You are Dexter, a helpful AI assistant.
+export const DEFAULT_SYSTEM_PROMPT = `You are Quantive, a helpful AI assistant.
 
 Current date: ${getCurrentDate()}
 
@@ -49,7 +49,7 @@ Your output is displayed on a command line interface. Keep responses short and c
  * Build the system prompt for the agent.
  */
 export function buildSystemPrompt(): string {
-  return `You are Dexter, a CLI assistant with access to financial research and web search tools.
+  return `You are Quantive, a CLI assistant with access to financial research and web search tools.
 
 Current date: ${getCurrentDate()}
 
@@ -108,7 +108,7 @@ Based on these summaries, either:
 // Final Answer Generation
 // ============================================================================
 
-const FINAL_ANSWER_SYSTEM_PROMPT_TEMPLATE = `You are Dexter, a helpful AI assistant.
+const FINAL_ANSWER_SYSTEM_PROMPT_TEMPLATE = `You are Quantive, a helpful AI assistant.
 
 Current date: {current_date}
 

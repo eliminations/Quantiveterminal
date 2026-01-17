@@ -1,13 +1,12 @@
-# Dexter 🤖
+# Quantive Terminal 🤖
 
-Dexter is an autonomous financial research agent that thinks, plans, and learns as it works. It performs analysis using task planning, self-reflection, and real-time market data. Think Claude Code, but built specifically for financial research.
+Quantive Terminal is an autonomous financial research agent that thinks, plans, and learns as it works. It performs analysis using task planning, self-reflection, and real-time market data. Think Claude Code, but built specifically for financial research.
 
 
-<img width="979" height="651" alt="Screenshot 2025-10-14 at 6 12 35 PM" src="https://github.com/user-attachments/assets/5a2859d4-53cf-4638-998a-15cef3c98038" />
 
 ## Overview
 
-Dexter takes complex financial questions and turns them into clear, step-by-step research plans. It runs those tasks using live market data, checks its own work, and refines the results until it has a confident, data-backed answer.  
+Quantive takes complex financial questions and turns them into clear, step-by-step research plans. It runs those tasks using live market data, checks its own work, and refines the results until it has a confident, data-backed answer.  
 
 **Key Capabilities:**
 - **Intelligent Task Planning**: Automatically decomposes complex queries into structured research steps
@@ -16,15 +15,14 @@ Dexter takes complex financial questions and turns them into clear, step-by-step
 - **Real-Time Financial Data**: Access to income statements, balance sheets, and cash flow statements
 - **Safety Features**: Built-in loop detection and step limits to prevent runaway execution
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/virattt?style=social)](https://twitter.com/virattt)
 
-<img width="996" height="639" alt="Screenshot 2025-11-22 at 1 45 07 PM" src="https://github.com/user-attachments/assets/8915fd70-82c9-4775-bdf9-78d5baf28a8a" />
 
 
 ### Prerequisites
 
 - [Bun](https://bun.com) runtime (v1.0 or higher)
 - OpenAI API key (get [here](https://platform.openai.com/api-keys))
+- xAI API key (get [here](https://console.x.ai)) - optional, for Grok models
 - Financial Datasets API key (get [here](https://financialdatasets.ai))
 - Tavily API key (get [here](https://tavily.com)) - optional, for web search
 
@@ -47,12 +45,10 @@ After installation, restart your terminal and verify Bun is installed:
 bun --version
 ```
 
-### Installing Dexter
+### Installing Quantive Terminal
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/virattt/dexter.git
-cd dexter
 ```
 
 2. Install dependencies with Bun:
@@ -69,6 +65,7 @@ cp env.example .env
 # OPENAI_API_KEY=your-openai-api-key
 # ANTHROPIC_API_KEY=your-anthropic-api-key
 # GOOGLE_API_KEY=your-google-api-key
+# XAI_API_KEY=your-xai-api-key
 
 # (Optional) If using Ollama locally
 # OLLAMA_BASE_URL=http://127.0.0.1:11434
@@ -80,7 +77,7 @@ cp env.example .env
 
 ### Usage
 
-Run Dexter in interactive mode:
+Run Quantive in interactive mode:
 ```bash
 bun start
 ```
@@ -92,13 +89,13 @@ bun dev
 
 ### Example Queries
 
-Try asking Dexter questions like:
+Try asking Quantive questions like:
 - "What was Apple's revenue growth over the last 4 quarters?"
 - "Compare Microsoft and Google's operating margins for 2023"
 - "Analyze Tesla's cash flow trends over the past year"
 - "What is Amazon's debt-to-equity ratio based on recent financials?"
 
-Dexter will automatically:
+Quantive will automatically:
 1. Break down your question into research tasks
 2. Fetch the necessary financial data
 3. Perform calculations and analysis
@@ -106,7 +103,7 @@ Dexter will automatically:
 
 ## Architecture
 
-Dexter uses a multi-agent architecture with specialized components:
+Quantive Terminal uses a multi-agent architecture with specialized components:
 
 - **Planning Agent**: Analyzes queries and creates structured task lists
 - **Action Agent**: Selects appropriate tools and executes research steps
@@ -117,7 +114,7 @@ Dexter uses a multi-agent architecture with specialized components:
 
 - **Runtime**: [Bun](https://bun.sh)
 - **UI Framework**: [React](https://react.dev) + [Ink](https://github.com/vadimdemedes/ink) (terminal UI)
-- **LLM Integration**: [LangChain.js](https://js.langchain.com) with multi-provider support (OpenAI, Anthropic, Google)
+- **LLM Integration**: [LangChain.js](https://js.langchain.com) with multi-provider support (OpenAI, Anthropic, Google, xAI, Ollama)
 - **Schema Validation**: [Zod](https://zod.dev)
 - **Language**: TypeScript
 
@@ -128,6 +125,8 @@ Type `/model` in the CLI to switch between:
 - GPT 4.1 (OpenAI)
 - Claude Sonnet 4.5 (Anthropic)
 - Gemini 3 (Google)
+- Grok 4 (xAI)
+- Local models (Ollama)
 
 ## How to Contribute
 

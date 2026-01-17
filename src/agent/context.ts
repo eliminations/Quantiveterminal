@@ -20,7 +20,7 @@ export class ContextManager {
   private readonly contextDir: string;
   private readonly results: ToolCallResult[] = [];
 
-  constructor(contextDir: string = '.dexter/context') {
+  constructor(contextDir: string = '.quantive/context') {
     this.contextDir = contextDir;
     if (!existsSync(contextDir)) {
       mkdirSync(contextDir, { recursive: true });
