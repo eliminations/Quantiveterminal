@@ -2,7 +2,7 @@
 
 Quantive Terminal is an autonomous financial research agent that thinks, plans, and learns as it works. It performs analysis using task planning, self-reflection, and real-time market data. Think Claude Code, but built specifically for financial research.
 
-
+![Quantive Terminal](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ew0_FFkO0vy_NkEgknuHRQ.jpeg)
 
 ## Overview
 
